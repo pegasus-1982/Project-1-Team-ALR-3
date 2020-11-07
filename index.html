@@ -12,7 +12,7 @@
 
 
 <div class="header">
-  <h2>API FOOD Template </h2>
+  <h2>API FOOD TTEMPLATE </h2>
 </div>
 
 <div class="row">
@@ -38,10 +38,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
  
-    /*
+   
 
     // Here we are building the URL we need to query the database
-    var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast";
+    var ingrPrinc = "chicken_breast";
+    var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i="+ingrPrinc ;
+
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -58,13 +60,16 @@
         console.log(response);
 
         // Transfer content to HTML
-                $("#food").html("<h1>" + response.meals[2].strMeal+ " Food </h1>");
-       
+   for (var i=0; i< 5;i++)
+{
+                $("#food").html("<li>" + response.meals[i].strMeal+ " Food </li>");
+                
+}      
         
        
       });
 
-      */
+      /*
 // Here we are building the URL we need to query the database
 var queryURLdrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka";
 
@@ -89,6 +94,8 @@ $.ajax({
     
    
   });
+
+   */
 
   </script>
 
