@@ -1,3 +1,4 @@
+
 // Here we are building the URL we need to query the database
 
 
@@ -32,12 +33,16 @@ for (var i=0; i< 5;i++)
    
   });
 
+
 });
 
 
-  /*
+  
+
 // Here we are building the URL we need to query the database
-var queryURLdrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka";
+var ingDrink="vodka";
+var queryURLdrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=" +ingDrink;
+//var queryURLdrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka";
 
 
 // Here we run our AJAX call to the OpenWeatherMap API
@@ -52,12 +57,12 @@ method: "GET"
 console.log(queryURLdrink);
 
 // Log the resulting object
-console.log(response);
+console.log(response.ingredients[0].strIngredient);
 
 // Transfer content to HTML
-        $("#drink").html("<h1>" + response.ingredients[1].strIngredient+ " Drink </h1>");
+     $("#drink").append("<h1>" + response.ingredients[0].strIngredient+ " Drink </h1>");
 
 
 
 });
-*/
+
