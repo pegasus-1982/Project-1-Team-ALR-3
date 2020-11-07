@@ -4,60 +4,15 @@
 <title> Api food</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+<link rel="stylesheet" href="styles.css">
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-.header {
-  background-color: #6b9fcf;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-}
-
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 24.99%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-  color:Black;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-.footer {
-  background-color: #6b9fcf;
-  padding: 10px;
-  text-align: center;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
 </head>
 <body>
 
 
 
 <div class="header">
-  <h2>API FOOD Template </h2>
+  <h2>API FOOD TTEMPLATE </h2>
 </div>
 
 <div class="row">
@@ -83,10 +38,12 @@ body {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
  
-    /*
+   
 
     // Here we are building the URL we need to query the database
-    var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast";
+    var ingrPrinc = "chicken";
+    var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i="+ingrPrinc ;
+
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -103,13 +60,16 @@ body {
         console.log(response);
 
         // Transfer content to HTML
-                $("#food").html("<h1>" + response.meals[2].strMeal+ " Food </h1>");
-       
+   for (var i=0; i< 5;i++)
+{
+                $("#food").html("<li>" + response.meals[i].strMeal+ " Food </li>");
+                
+}      
         
        
       });
 
-      */
+      /*
 // Here we are building the URL we need to query the database
 var queryURLdrink = "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka";
 
@@ -134,6 +94,8 @@ $.ajax({
     
    
   });
+
+   */
 
   </script>
 
