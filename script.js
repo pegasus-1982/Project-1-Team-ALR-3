@@ -6,7 +6,7 @@
 // Here we run our AJAX call to the OpenWeatherMap API
 $(".ingredient-form").on("submit",function(event){
 event.preventDefault();
-  var mainIngredient = $("#ingredient").val();
+  var mainIngredient = $("#ingredientFood").val();
   var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?i="+ mainIngredient;
 
   console.log(mainIngredient);
@@ -57,10 +57,10 @@ method: "GET"
 console.log(queryURLdrink);
 
 // Log the resulting object
-console.log(response.ingredients[0].strIngredient);
+console.log(response.ingredients[0]);
 
 // Transfer content to HTML
-     $("#drink").append("<h1>" + response.ingredients[0].strIngredient+ " Drink </h1>");
+     $("#drink").append("<h1>" + response.ingredients[0].strDescription+ " Drink </h1>");
 
 
 
