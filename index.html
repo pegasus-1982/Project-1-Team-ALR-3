@@ -23,7 +23,7 @@
 <div class="row">
   <div class="column" style="background-color:rgb(166, 211, 219);">
     <div class="row">
-      <form class="col s12">
+      <form class="col s12 ingredient-form">
         <div class="row">
           <div class="input-field col s12">
             <input id="ingredient" type="text" class="validate">
@@ -35,14 +35,12 @@
     </div>
     <!-- <p>Search Ingredient buscar en el API WEB un ingrediente agregar boton de busqueda https://www.themealdb.com/api.php</p> -->
   </div>
-  <div class="column" style="background-color:rgb(150, 209, 219);">Menu despliega la recetas 
-<ul>
-    <li>Menu 1 </li>
-    <li>Menu 2</li>
-    <li>Menu 3 </li>
-</ul>
 
-</div>
+  <div class="column dishes" style="background-color:rgb(150, 209, 219);">Menu despliega la recetas 
+    <ul id="dishes-list">
+    </ul>
+  </div>
+  
   <div class="column" id="food" style="background-color:rgb(141, 203, 214);"> el ingrediente en Api Comida si existe </div>
   <div class="column" id="drink" style="background-color:rgb(112, 200, 216);">el ingrediente en  API de bebidas  su costo   </div>
 </div>
