@@ -37,6 +37,24 @@
     text-align: center;
   }
   
+    /* Style Nat var link*/
+  a:link, a:visited {
+    background-color: #41568d;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:active {
+    color: blue;
+  }
+  /* mouse over link  and selected link */
+  a:hover, a:active {
+    background-color: rgb(86, 35, 236);
+  }
+
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media (max-width: 600px) {
     .column {
