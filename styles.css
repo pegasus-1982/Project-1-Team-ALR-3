@@ -75,7 +75,36 @@
   
 }
 
+#img1,
+#img2,
+#img3 {
+  height: 100px;
+  width: 100px;
+  display: none;
+}
 
+#img4 {
+  width: 200px;
+  height: auto;
+  display: none;
+  margin-left: 50px;
+}
+
+#Luis,
+#Raque,
+#Tono {
+  height: 200px;
+  width: auto;
+  margin-left: 50px;
+}
+
+.card {
+  text-align: center;
+}
+
+.brand-logo {
+  margin-right: 50px;
+}
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media (max-width: 600px) {
     .column {
