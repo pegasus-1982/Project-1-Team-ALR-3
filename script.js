@@ -45,9 +45,6 @@ $.ajax({
 
 
 
-$(".drink-form").on("submit",function(event){
-  event.preventDefault();
-
 
   // Here we are building the URL we need to query the database
   var ingDrink=$("#ingredientDrink").val();
