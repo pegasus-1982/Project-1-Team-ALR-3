@@ -1,95 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title> Api food</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title> Api food</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 
-</head>
-<body>
-
-
-
-<div class="header" id="headerImg">
-  
-  <h2>API FOOD TEMPLATE </h2>
- 
-</div>
+  </head>
+  <body>
 
 
 
-<!--Adding the navigation bar using materialize format-->
-<nav>
-  <div class="nav-wrapper cyan darken-3">
-    <a href="./aboutUs.html" class="brand-logo right">About us</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href="./index.html">HOME</a></li>
-      <li><a href="./userStory.html">User Story</a></li>
-      <li><a href="https://www.thecocktaildb.com/api.php" target="_blank">API DRINK</a></li>
-      <li><a href="https://www.themealdb.com/api.php" target="_blank">API FOOD</a></li>
-    </ul>
+
+  <div class="header" id="headerImg">
+    <h2>API FOOD TEMPLATE </h2> 
   </div>
-</nav>
 
-<!--Menu de busqueda primer-->
-<div class="row container">
-  
-  <div class="col s2">
-    <div class="row">
-      <form class="col s12 ingredient-form">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="ingredientFood" type="text" class="validate">
-            <label for="ingredients">FOODS</label>
-            <span class="helper-text" data-error="wrong" data-success="right">Search Ingredient buscar en el API WEB un ingrediente agregar boton de busqueda</span>
+
+  <!--Adding the navigation bar using materialize format-->
+  <nav>
+    <div class="nav-wrapper cyan darken-3">
+      <a href="./aboutUs.html" class="brand-logo right">About us</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./userStory.html">User Story</a></li>
+        <li><a href="https://www.thecocktaildb.com/api.php" target="_blank">API DRINK</a></li>
+        <li><a href="https://www.themealdb.com/api.php" target="_blank">API FOOD</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Menu de busqueda primer-->
+  <div class="row container">
+    <!-- <div class="column" style="background-color:rgb(166, 211, 219);"> -->
+    <!--Menu de busqueda primer-->
+  <div class="row">
+    <div class="col s2">
+      <div class="row">
+        <form class="col s12 ingredient-form">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="ingredientFood" type="text" class="validate">
+              <label for="ingredients">FOODS</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Search Ingredient buscar en el API WEB un ingrediente agregar boton de busqueda</span>
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
+
+      <div class="row">
+        <form class="col s12 drink-form">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="ingredientDrink" type="text" class="validate">
+              <label for="drinks">DRINKS</label>
+              <span class="helper-text" data-error="wrong" data-success="right">Search drink buscar en el API WEB un ingrediente agregar boton de busqueda</span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+   
+    <div class="column dishes" class="col s5">Surprise your guests with either of the following dishes:
+      <ul id="dishes-list">
+      </ul>
     </div>
 
-    <div class="row">
-      <form class="col s12 drink-form">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="ingredientDrink" type="text" class="validate">
-            <label for="drinks">DRINKS</label>
-            <span class="helper-text" data-error="wrong" data-success="right">Search drink buscar en el API WEB un ingrediente agregar boton de busqueda</span>
-          </div>
-        </div>
-      </form>
+
+    <div class="column" id="drink" class="col s5">Entertain your guest with the following cocktail:   
+      <ul id="dishes-drink">
+      </ul>
     </div>
+
+      
+    <!-- <p>Search Ingredient buscar en el API WEB un ingrediente agregar boton de busqueda https://www.themealdb.com/api.php</p> -->
+  </div>
     
-  </div>
-
-  <div class="column dishes" class="col s5">Surprise your guests with either of the following dishes:
-    <ul id="dishes-list">
-    </ul>
-  </div>
   
-  <div class="column" id="drink" class="col s5">Entertain your guest with the following cocktail:   
-    <ul id="dishes-drink">
-    </ul>
-  </div>
-</div>
 
-
-
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
  
-<!--JavaScript at end of body for optimized loading-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript" src="script.js"> </script>
-
-</body>
+  </div>
 
 
+  <!-- <div class="footer">
+    <p>Footer</p> -->
+  </div>
 
-</html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="script.js"> </script>
+
+  </body>
+  </html>
