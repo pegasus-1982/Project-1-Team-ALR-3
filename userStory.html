@@ -35,8 +35,8 @@
   <div class="nav-wrapper cyan darken-3">
     <a href="./aboutUs.html" class="brand-logo right">About us</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a href="./index.html">HOME</a></li>
-      <li><a href="./userStory.html">User Story</a></li>
+      <li><a href="./index.html" target="_blank">HOME</a></li>
+      <li><a href="./userStory.html" target="_blank">User Story</a></li>
       <li><a href="https://www.thecocktaildb.com/api.php" target="_blank">API DRINK</a></li>
       <li><a href="https://www.themealdb.com/api.php" target="_blank">API FOOD</a></li>
     </ul>
@@ -46,42 +46,31 @@
 <!--Menu de busqueda primer-->
 <div class="row container">
   <!-- <div class="column" style="background-color:rgb(166, 211, 219);"> -->
-  <div class="col s2">
-    <div class="row">
-      <form class="col s12 ingredient-form">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="ingredientFood" type="text" class="validate">
-            <label for="ingredients">FOODS</label>
-            <span class="helper-text" data-error="wrong" data-success="right">Search Ingredient buscar en el API WEB un ingrediente agregar boton de busqueda</span>
-          </div>
-        </div>
-      </form>
-    </div>
+  <div class="col s12">
+      <div class="z-depth-5" id="userStory">
+          <p id="p1">
+              This API was built thinking: </br>
+              - As a Host </br>
+              - I want to get a variety of food dishes </br>
+              - so that I can surprise my guests </br>
+              - We used the following API for this purpose: </br>
+              <a href="https://www.themealdb.com/api.php" target="_blank"> themealdb.com</a>
+          </p>
 
-    <div class="row">
-      <form class="col s12 drink-form">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="ingredientDrink" type="text" class="validate">
-            <label for="drinks">DRINKS</label>
-            <span class="helper-text" data-error="wrong" data-success="right">Search drink buscar en el API WEB un ingrediente agregar boton de busqueda</span>
-          </div>
-        </div>
-      </form>
-    </div>
-    <!-- <p>Search Ingredient buscar en el API WEB un ingrediente agregar boton de busqueda https://www.themealdb.com/api.php</p> -->
+          <p id="p2">
+            This API was also built thinking: </br>
+            - As a Host </br>
+            - I want to get a variety of coktails </br>
+            - so that I can surprise my guests </br>
+            - We used the following API for this purpose: </br>
+            <a href="https://www.thecocktaildb.com/api.php" target="_blank"> thecocktaildb.com</a>
+        </p>
+      </div>
   </div>
 
-  <div class="column dishes" class="col s5">Surprise your guests with either of the following dishes:
-    <ul id="dishes-list">
-    </ul>
-  </div>
+    
   
-  <div class="column" id="drink" class="col s5">Entertain your guest with the following cocktail:   
-    <ul id="dishes-drink">
-    </ul>
-  </div>
+  
 </div>
 
 
