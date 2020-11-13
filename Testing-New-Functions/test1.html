@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Api food</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+
+
+
+
+<div class="header" id="headerImg">
+  <h2>API FOOD TEMPLATE </h2> 
+</div>
+
+
+<!--Adding the navigation bar using materialize format-->
+<nav>
+  <div class="nav-wrapper cyan darken-3">
+    <a href="./aboutUs.html" class="brand-logo right">About us</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./userStory.html">User Story</a></li>
+      <li><a href="https://www.thecocktaildb.com/api.php" target="_blank">API DRINK</a></li>
+      <li><a href="https://www.themealdb.com/api.php" target="_blank">API FOOD</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!--Setting up the container section-->
+<div class="row container">
+  
+  <!--Everything is happening in one Row-->
+
+    <div class="row">
+        <!--Setting up 1st column (left pannel) which holds 2 rows, first row searches for food options, second row generates random drink -->
+        <div class="col s2">
+
+            <!--First sub-row within 1st column, search input form for food dishes-->
+            <div class="row">
+            <form class="col s12 ingredient-form">
+                <div class="row">
+                <div class="input-field col s12">
+                    <input id="ingredientFood" type="text" class="validate">
+                    <label for="ingredients">Ingredient</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Type Ingredient and hit enter to get 3 alternatives of food dishes to surprise your guests</span>
+                </div>
+                </div>
+            </form>
+            </div>
+
+            <!--Second sub-row within 1st column, random drink generator-->
+            <div class="row">
+                <a class="waves-effect cyan darken-3 btn-large drink-form">Generate Random Drink</a>
+            </div>
+
+        </div>
+
+        <!--2nd column, output section for food dishes-->
+        <div class="column dishes" class="col s5">Surprise your guests with either of the following dishes:
+            <!-- <ul id="dishes-list">
+            <img id="img1">
+            <img id="img2">
+            <img id="img3">       
+            </ul> -->
+
+            <!-- trying to add carusel function for dish outup section-->
+            <div class="carousel carousel-slider center">
+
+                <!-- <div class="carousel-fixed-item center">
+                <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                </div> -->
+
+                <div class="carousel-item red white-text" href="#one!">
+
+                    <h3 id="dish1-h3"></h3>
+                    <p class="white-text" id="dish1"></p>
+                    
+                        <div class="card-image">
+                          <img id="img1" src="">                        
+                        </div>
+
+                </div>
+
+                <div class="carousel-item amber white-text" href="#two!">
+
+                    <h3 id="dish2-h3"></h3>
+                    <p class="white-text" id="dish2"></p>
+                        <div class="card-image">
+                            <img id="img2" src="">                        
+                        </div>
+
+                </div>
+
+    
+
+                <div class="carousel-item green white-text" href="#three!">
+                    <h3 id="dish3-h3"></h3>
+                    <p class="white-text" id="dish3"></p>
+                        <div class="card-image">
+                            <img id="img3" src="">                        
+                        </div>
+
+                </div>
+                
+                
+            </div>
+        
+        </div>
+
+        <!--3rd column, output section for random drink-->
+        <div class="column" id="drink" class="col s5">Entertain your guest with the following cocktail:  
+        
+            <ul id="dishes-drink">
+            <img src="../drinkC.jpg" id="img4">
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="../script.js"> </script>
+
+</body>
+</html>
