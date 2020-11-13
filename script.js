@@ -106,7 +106,9 @@ $(document).ready(function(){
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
+//tag.src = "https://www.youtube.com/iframe_api";
+//Adding Id video
+tag.src = "https://www.youtube.com/embed/6iSH2pqJsKI";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -117,7 +119,7 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '390',
     width: '640',
-    videoId: 'M7lc1UVf-VE',
+    videoId: '6iSH2pqJsKI',
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
@@ -145,3 +147,33 @@ function stopVideo() {
 }
 
 //Video call fin Raque 
+
+
+
+ // Ading list  rake 
+ window.onload = init;
+ function init(){
+     botonEnvio = document.querySelector('[type="button"]');
+     nuevoItem = document.querySelector('[type="text"]');
+     listaCompra = document.getElementById("listaCompra");
+     
+     botonEnvio.addEventListener("click",anadir);
+ }
+
+ function anadir(ingrediente){
+     evento = ingrediente || window.event;
+     if (nuevoItem.value == ""){
+         evento.preventDefault();
+     }else{
+     var lista = document.createElement("li");
+     lista.innerHTML = nuevoItem.value;
+     lista.addEventListener("dblclick",eliminarLi);
+     listaCompra.appendChild(lista);
+     nuevoItem.value = "";
+     }
+ }
+ function eliminarLi(){
+     this.parentNode.removeChild(this);
+ }
+
+  // Ading list  rake end

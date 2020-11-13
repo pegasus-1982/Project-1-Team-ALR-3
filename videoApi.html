@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <title> Api food Video</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+
+  <link rel="stylesheet" href="styles.css">
+
+  </head>
+  <body>
+
+
+    <div id="container">
+
+
+        <!-- Ading video of food inicio -->
+   
+     <div class="col s12 m7" >
+       <h2 class="header">Video chicken recipe</h2>
+       
+       <div class="card horizontal">
+         <div class="card-image">
+          
+            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+         <!-- <div id="player" style="center"></div>.  -->
+         
+          <!--for change video just search for a new  id video = 6iSH2pqJsKI -->
+
+         <iframe id="ytplayer" type="text/html" width="600" height="400"
+        
+         src="https://www.youtube.com/embed/6iSH2pqJsKI?autoplay=1&origin"
+         frameborder="0"></iframe>
+       
+         </div>
+         <div class="card-stacked">
+           <div class="card-content">
+             <form action="#">
+                <label for="anadir">Custom your super list:</label>
+                <input type="text" name="anadirIng" id="anadir">
+                
+                <input type="button" value="Add ingredient lo list" >
+            </form>    
+            
+            <ul id="listaCompra"> 
+            
+                
+                
+            
+            </ul>
+            
+            
+            <p>Note: You can erase element with duble click</p>
+           </div>
+           <div class="card-action">
+             <a href="https://developers.google.com/youtube/v3/docs/search/list?hl=es&apix_params=%7B%22part%22%3A%5B%22receta%20%22%5D%7D">Link API VIDEO</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   
+   
+    
+     <!-- Ading video of food  fin-->
+          
+          </div>
+   
+        
+    
+  <div class="col s12 m7">
+    <h2 class="header">Horizontal Card</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="food3.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+            
+
+              <!--
+  Sizes:
+  tiny: 1rem
+  small: 2rem
+  medium: 4rem
+  large: 6rem
+  -->
+
+            <i class="large material-icons">insert_chart</i>
+            <p id="level">Level.   easy</p>
+            <i class="large material-icons">access_alarms</i>
+            <p id="timeprep">Time :  12 minutes</p>
+            <i class="large material-icons"> child_care</i>    
+            <p id="numberServings">Servings :4 people.</p>
+                    
+
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="script.js"> </script>
+
+  </body>
+  </html>
