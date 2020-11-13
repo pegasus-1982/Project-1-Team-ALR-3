@@ -24,15 +24,26 @@ $.ajax({
     console.log(response.meals[0].strMeal);
     console.log(response.meals[1].strMeal);
     console.log(response.meals[2].strMeal);
+    console.log(response.meals[0].strMealThumb);
+    console.log(response.meals[1].strMealThumb);
+    console.log(response.meals[2].strMealThumb);
 
 
     // Transfer content to HTML
     $("#dishes-list").append("<h3>" + "Options using " + mainIngredient + "</h3>");
+    
     $("#dishes-list").append("<li>" + response.meals[0].strMeal + "</li>");
+    $("#img1").attr("src", response.meals[0].strMealThumb);
+    $("#img1").show();
+    
     $("#dishes-list").append("<li>" + response.meals[1].strMeal + "</li>"); 
+    $("#img2").attr("src", response.meals[1].strMealThumb);
+    $("#img2").show();
+
     $("#dishes-list").append("<li>" + response.meals[2].strMeal + "</li>"); 
-    $("#dishes-list").append("<li>" + response.meals[3].strMeal + "</li>");
-    $("#dishes-list").append("<li>" + response.meals[4].strMeal + "</li>"); 
+    $("#img3").attr("src", response.meals[2].strMealThumb);
+    $("#img3").show();
+    
 
     
   
@@ -72,7 +83,7 @@ $(".drink-form").on("click",function(event){
   console.log(response.drinks[0].strIngredient4);
   console.log(response.drinks[0].strInstructions);
   
-  
+      $("#img4").show();
        $("#dishes-drink").append("<h3>" + response.drinks[0].strDrink + "</h3>"); 
        $("#dishes-drink").append("<li>" + response.drinks[0].strIngredient1 + "</li>"); 
        $("#dishes-drink").append("<li>" + response.drinks[0].strIngredient2 + "</li>"); 
