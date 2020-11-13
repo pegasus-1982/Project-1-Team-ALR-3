@@ -98,5 +98,93 @@ $(".drink-form").on("click",function(event){
 });
 
 
+//Carrousell call inicio Raque 
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
+
+//Carrousell call fin Raque 
+
+//Video call fin Raque 
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+//tag.src = "https://www.youtube.com/iframe_api";
+//Adding Id video
+tag.src = "https://www.youtube.com/embed/6iSH2pqJsKI";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: '6iSH2pqJsKI',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(stopVideo, 6000);
+    done = true;
+  }
+}
+function stopVideo() {
+  player.stopVideo();
+}
+
+//Video call fin Raque 
 
 
+
+ // Ading list  rake 
+ window.onload = init;
+ function init(){
+     botonEnvio = document.querySelector('[type="button"]');
+     nuevoItem = document.querySelector('[type="text"]');
+     listaCompra = document.getElementById("listaCompra");
+     
+     botonEnvio.addEventListener("click",anadir);
+ }
+
+ function anadir(ingrediente){
+     evento = ingrediente || window.event;
+     if (nuevoItem.value == ""){
+         evento.preventDefault();
+     }else{
+     var lista = document.createElement("li");
+     lista.innerHTML = nuevoItem.value;
+     lista.addEventListener("dblclick",eliminarLi);
+     listaCompra.appendChild(lista);
+     nuevoItem.value = "";
+     }
+ }
+ function eliminarLi(){
+     this.parentNode.removeChild(this);
+ }
+
+  // Ading list  rake end
