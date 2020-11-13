@@ -23,15 +23,17 @@
     <!--Adding the navigation bar using materialize format-->
     <nav>
       <div class="nav-wrapper cyan darken-3">
-        <a href="./aboutUs.html" class="brand-logo right">About us</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-          <li><a href="./index.html">HOME</a></li>
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-trigger btn cyan darken-3' href='#' data-target='dropdown1'>Drop Me!</a>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="./aboutUs.html"><i class="material-icons">mood</i>About us</a></li>
+          <li><a href="./index.html"><i class="material-icons">home</i>HOME</a></li>
+          <li class="divider" tabindex="-1"></li>
           <li><a href="./userStory.html">User Story</a></li>
-          <li><a href="https://www.thecocktaildb.com/api.php" target="_blank">API DRINK</a></li>
-          <li><a href="https://www.themealdb.com/api.php" target="_blank">API FOOD</a></li>
-          <li><a href="./videoApi.html">API VIDEO</a></li>
-        </ul>
-      </div>
+          <li><a href="https://www.thecocktaildb.com/api.php"><i class="material-icons">free_breakfast</i>API DRINK</a></li>
+          <li><a href="https://www.themealdb.com/api.php"><i class="material-icons">local_dining</i>API FOOD</a></li>
+          <li><a href="./videoApi.html"><i class="material-icons">ondemand_video</i>API VIDEO</a></li>
     </nav>
 
     <div id="container">

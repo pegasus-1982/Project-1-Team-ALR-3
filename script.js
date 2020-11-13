@@ -21,26 +21,37 @@ $.ajax({
 
     // Log the resulting object
     console.log(response);
+    /*
     console.log(response.meals[0].strMeal);
     console.log(response.meals[1].strMeal);
     console.log(response.meals[2].strMeal);
     console.log(response.meals[0].strMealThumb);
     console.log(response.meals[1].strMealThumb);
     console.log(response.meals[2].strMealThumb);
+    */
 
+    if(response.meals === null){
+      $(".helper-text").text("Try another ingredient");
+    }else{
+      $(".helper-text").text("Search Ingredient buscar en el API WEB un ingrediente agregar boton de busqueda");
+    }
 
     // Transfer content to HTML
-    $("#dishes-list").append("<h3>" + "Options using " + mainIngredient + "</h3>");
-    
-    $("#dishes-list").append("<li>" + response.meals[0].strMeal + "</li>");
+    //$("#dishes-list").append("<h3>" + "Options using " + mainIngredient + "</h3>");
+    $(".options").text("Options using " + mainIngredient);
+
+   // $("#dishes-list").append("<li>" + response.meals[0].strMeal + "</li>");
+    $(".dish-1").text(response.meals[0].strMeal);
     $("#img1").attr("src", response.meals[0].strMealThumb);
     $("#img1").show();
     
-    $("#dishes-list").append("<li>" + response.meals[1].strMeal + "</li>"); 
+   // $("#dishes-list").append("<li>" + response.meals[1].strMeal + "</li>"); 
+    $(".dish-2").text(response.meals[1].strMeal);
     $("#img2").attr("src", response.meals[1].strMealThumb);
     $("#img2").show();
 
-    $("#dishes-list").append("<li>" + response.meals[2].strMeal + "</li>"); 
+   // $("#dishes-list").append("<li>" + response.meals[2].strMeal + "</li>"); 
+    $(".dish-3").text(response.meals[2].strMeal);
     $("#img3").attr("src", response.meals[2].strMealThumb);
     $("#img3").show();
     
@@ -76,22 +87,27 @@ $(".drink-form").on("click",function(event){
   console.log(queryURLdrink);
   
   // Log the resulting object
+  /*
   console.log(response.drinks[0].strDrink);
   console.log(response.drinks[0].strIngredient1);
   console.log(response.drinks[0].strIngredient2);
   console.log(response.drinks[0].strIngredient3);
   console.log(response.drinks[0].strIngredient4);
   console.log(response.drinks[0].strInstructions);
-  
+  */
       $("#img4").show();
-       $("#dishes-drink").append("<h3>" + response.drinks[0].strDrink + "</h3>"); 
-       $("#dishes-drink").append("<li>" + response.drinks[0].strIngredient1 + "</li>"); 
-       $("#dishes-drink").append("<li>" + response.drinks[0].strIngredient2 + "</li>"); 
-       $("#dishes-drink").append("<li>" + response.drinks[0].strIngredient3 + "</li>"); 
-       $("#dishes-drink").append("<li>" + response.drinks[0].strIngredient4 + "</li>"); 
-       $("#dishes-drink").append("<p>" + response.drinks[0].strInstructions + "</p>"); 
-  
-  
+         //$("#dishes-drink").append("<h3>" + response.drinks[0].strDrink + "</h3>"); 
+       $(".drink-options").text(response.drinks[0].strDrink);
+       //$("#dishes-drink").append("<li>" + response.drinks[0].strIngredient1 + "</li>"); 
+       $(".drink-1").text(response.drinks[0].strIngredient1);
+       //$("#dishes-drink").append("<li>" + response.drinks[0].strIngredient2 + "</li>"); 
+       $(".drink-2").text(response.drinks[0].strIngredient2);
+       //$("#dishes-drink").append("<li>" + response.drinks[0].strIngredient3 + "</li>"); 
+       $(".drink-3").text(response.drinks[0].strIngredient3);
+       //$("#dishes-drink").append("<li>" + response.drinks[0].strIngredient4 + "</li>"); 
+       $(".drink-4").text(response.drinks[0].strIngredient4);
+       //$("#dishes-drink").append("<p>" + response.drinks[0].strInstructions + "</p>");   
+       $("instructions").text(response.drinks[0].strInstructions);
   
   });
 
