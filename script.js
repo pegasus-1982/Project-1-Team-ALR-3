@@ -114,20 +114,6 @@ $(".drink-form").on("click",function(event){
 });
 
 
-//Carrousell call inicio Raque 
-
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.carousel');
-  var instances = M.Carousel.init(elems, options);
-});
-
-// Or with jQuery
-
-$(document).ready(function(){
-  $('.carousel').carousel();
-});
-
-//Carrousell call fin Raque 
 
 //Video call fin Raque 
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -187,20 +173,54 @@ function stopVideo() {
      botonEnvio.addEventListener("click",anadir);
  }
 
- function anadir(ingrediente){
-     evento = ingrediente || window.event;
-     if (nuevoItem.value == ""){
-         evento.preventDefault();
-     }else{
+ var ingredients = [];
+
+ 
+ function anadir(evento){
+  evento.preventDefault();
+     
      var lista = document.createElement("li");
      lista.innerHTML = nuevoItem.value;
+    
+
+     
+      ingredients.push(nuevoItem.value);
+    
+     console.log(nuevoItem.value);
+      
+     localStorage.setItem("ingredients", JSON.stringify(ingredients));
+      
+     console.log(ingredients);
+     
+
      lista.addEventListener("dblclick",eliminarLi);
      listaCompra.appendChild(lista);
      nuevoItem.value = "";
-     }
+    
  }
  function eliminarLi(){
      this.parentNode.removeChild(this);
  }
 
   // Ading list  rake end
+
+  function readFromStorage(){
+    
+    var ingredientsFromStorage = JSON.parse(localStorage.getItem("ingredients"));
+    ingredients = ingredientsFromStorage || [];
+    
+  }
+
+  readFromStorage();
+
+
+  function renderTasks(){
+    for(var i=0; i<ingredients.length;i++){
+      var lista = document.createElement("li");
+      lista.innerHTML = ingredients[i];
+      listaCompra.appendChild(lista);
+    }
+  }
+
+  renderTasks();
+  
